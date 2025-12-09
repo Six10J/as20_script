@@ -1,12 +1,7 @@
 #!/bin/bash
 #
-# Detta script samlar in systeminformation - RECON
-#
-# Kan användas för följande attacker:
-# [Skriv möjliga attacker]
-#
-# Author: Frans Schartau
-# Last Update: 2025-01-01
+# Author: Sixten Jansson
+# Last Update: 2025-12-09
 
 
 echo "Välkommen till RECON script för att kontrollera en Linux-miljö"
@@ -36,8 +31,4 @@ echo "=== Hårdvara  ==="
 lscpu | grep -A3 Architecture
 echo
 free -h
-
-echo
-echo "=== Test ==="
-# skriv in dina egna kommandon för tester
 
