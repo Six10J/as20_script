@@ -1,0 +1,44 @@
+Exempel output av script.sh
+
+Välkommen till RECON script för att kontrollera en Linux-miljö
+
+=== SYSTEMINFO ===
+Linux SixtensLaptop 6.6.87.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025 x86_64 GNU/Linux
+
+WSL_DISTRO_NAME=kali-linux
+NAME=SixtensLaptop
+PWD=/home/Sixten/kod/fs/as20/ol
+LOGNAME=Sixten
+LANG=en_US.UTF-8
+
+=== AKTUELL ANVÄNDARE ===
+Sixten
+
+=== ANVÄNDARE MED SHELL ===
+root:x:0:0:root:/root:/bin/bash
+Sixten:x:1000:1000::/home/Sixten:/bin/bash
+
+=== NÄTVERK ===
+    inet 127.0.0.1/8 scope host lo
+    inet 10.255.255.254/32 brd 10.255.255.254 scope global lo
+    inet6 ::1/128 scope host proto kernel_lo
+    inet 172.21.198.164/20 brd 172.21.207.255 scope global eth0
+    inet6 fe80::215:5dff:fe49:30cd/64 scope link proto kernel_ll
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   782 100   782   0     0  1856     0  --:--:-- --:--:-- --:--:--  1861
+    ip: 217.21.233.209,
+    network: 217.21.224.0/20,
+
+=== Hårdvara  ===
+Architecture:                         x86_64
+CPU op-mode(s):                       32-bit, 64-bit
+Address sizes:                        39 bits physical, 48 bits virtual
+Byte Order:                           Little Endian
+
+               total        used        free      shared  buff/cache   available
+Mem:           3.7Gi       372Mi       3.3Gi       3.8Mi       121Mi       3.3Gi
+Swap:          1.0Gi          0B       1.0Gi
+
+=== Test ===
