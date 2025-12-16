@@ -32,5 +32,6 @@ lscpu | grep -A3 Architecture
 echo
 free -h
 
+# last $USER IDK, I give up
 # Nice!
 # Kan du lägga till en echo hur länge datorn har varit på?
