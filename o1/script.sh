@@ -32,3 +32,5 @@ lscpu | grep -A3 Architecture
 echo
 free -h
 
+# Nice!
+# Kan du lägga till en echo hur länge datorn har varit på?
