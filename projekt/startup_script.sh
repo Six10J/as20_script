@@ -1,3 +1,3 @@
 #!/bin/sh
 
-ifconfig
+echo $OSTYPE
