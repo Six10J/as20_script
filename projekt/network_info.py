@@ -10,3 +10,10 @@ import socket
 
 #Skriver ut nätverks infromation
 print("Hostname: " + socket.gethostname())
+
+#Lösning för att skriva ut IPv4 address lånat 
+#från https://stackoverflow.com/questions/166506/finding-local-ip-addresses-using-pythons-stdlib (2026-01-09)
+s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+s.connect(("8.8.8.8", 80))
+print("IPv4 address: " + s.getsockname()[0])
+s.close()
