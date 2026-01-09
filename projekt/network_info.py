@@ -2,7 +2,7 @@
 
 #Rubrik av programmet visar vilken version programmet är i 
 print ("")
-print ("--- network_info v 0.1 ---")
+print ("--- network_info v 0.3 ---")
 print ("")
 
 #För att fastställa att programmet kan arbeta med nätverks information
@@ -17,3 +17,10 @@ s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 s.connect(("8.8.8.8", 80))
 print("IPv4 address: " + s.getsockname()[0])
 s.close()
+
+#Gör så att programmet kan kör CLI komandon
+import os
+
+#Test av att köra CLI komandon
+print ("")
+print (os.system("ping -c 4 8.8.8.8"))
