@@ -9,7 +9,7 @@ import re, uuid
 
 #Rubrik av programmet visar vilken version programmet är i 
 print ("")
-print ("--- network_info v 0.32 ---")
+print ("--- network_info v 0.33 ---")
 print ("")
 
 #Skriver ut nätverks infromation
