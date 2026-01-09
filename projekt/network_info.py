@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 
-#Rubrik av programmet visar vilken version programmet är i 
-print ("")
-print ("--- network_info v 0.31 ---")
-print ("")
-
 #För att fastställa att programmet kan arbeta med nätverks information
 import socket
+#Gör så att programmet kan köra CLI komandon
+import os
+
+#Rubrik av programmet visar vilken version programmet är i 
+print ("")
+print ("--- network_info v 0.32 ---")
+print ("")
 
 #Skriver ut nätverks infromation
 print("Hostname: " + socket.gethostname())
@@ -17,9 +19,6 @@ s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 s.connect(("8.8.8.8", 80))
 print("IPv4 address: " + s.getsockname()[0])
 s.close()
-
-#Gör så att programmet kan köra CLI komandon
-import os
 
 #Test av att köra CLI komandon
 print ("")
