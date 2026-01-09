@@ -2,7 +2,7 @@
 
 #Rubrik av programmet visar vilken version programmet är i 
 print ("")
-print ("--- network_info v 0.3 ---")
+print ("--- network_info v 0.31 ---")
 print ("")
 
 #För att fastställa att programmet kan arbeta med nätverks information
@@ -18,7 +18,7 @@ s.connect(("8.8.8.8", 80))
 print("IPv4 address: " + s.getsockname()[0])
 s.close()
 
-#Gör så att programmet kan kör CLI komandon
+#Gör så att programmet kan köra CLI komandon
 import os
 
 #Test av att köra CLI komandon
