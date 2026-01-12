@@ -29,3 +29,10 @@ print("MAC address: " + mac)
 #Test av att köra CLI komandon
 print ("")
 print (os.system("ping -c 4 8.8.8.8"))
+
+
+# Feature for code:
+# The Ping dosent work in windows platform and Linux good to go.
+# Cant run ./network_info.py and i chmod 777 and rerun it.
+# Use try-except to catch network bug and so on 
+# // Rob
