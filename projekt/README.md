@@ -22,3 +22,5 @@ Windows: python network_info.py
 Programmet är i beta stadiet och så här ser dess output ut, första bilden är in Linux miljö andra i Windows
 
 ![Output bild](exempel.png)
+
+![Output bild](exempel2.png)
