@@ -2,14 +2,15 @@
 
 #För att fastställa att programmet kan arbeta med nätverks information
 import socket
-#Gör så att programmet kan köra CLI komandon
-import os
 #Impoterar maskinvara info
 import re, uuid
+#Gör så att programmet kan köra CLI komandon
+import os, subprocess
+os_value = (os.name)
 
 #Rubrik av programmet visar vilken version programmet är i 
 print ("")
-print ("--- network_info v 0.4 ---")
+print ("--- network_info v 0.5 ---")
 print ("")
 
 #Skriver ut nätverks infromation
@@ -26,10 +27,20 @@ s.close()
 mac = ':'.join(re.findall('..', '%012x' % uuid.getnode()))
 print("MAC address: " + mac)
 
-#Test av att köra CLI komandon
+#Usel lösning för att skriva ut netmask och broadcast address kunde inte hitta något bättre
+if os_value == "posix":
+ ifconfig_var = str(subprocess.run("ifconfig | grep ""netmask""", shell=True, capture_output=True, text=True))
+ ifconfig_var_list = ifconfig_var.split()
+ # för testing av kod print (ifconfig_var_list)
+ print ("Subnet mask: " + ifconfig_var_list[9])
+ broadcast_address = ifconfig_var_list[11]
+ broadcast_address = broadcast_address.replace("\\n", "")
+ print ("Brodcast address: " + broadcast_address)
 
-os_value = (os.name)
+else:
+ print("This program can currently only print Subnet mask and Broadcast address in a Linux enviorment")
 
+#Pingar googles publika DNS server, olika kod beroende på operativ system
 if os_value == "posix":
  print ("")
  print (os.system("ping -c 4 8.8.8.8"))
@@ -37,6 +48,9 @@ if os_value == "posix":
 elif os_value == "nt":
  print ("")
  print (os.system("ping 8.8.8.8"))
+
+else:
+ print("Unkown operating system detected") 
 
 # Feature for code:
 # The Ping dosent work in windows platform and Linux good to go.
