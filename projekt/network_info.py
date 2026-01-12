@@ -9,7 +9,7 @@ import re, uuid
 
 #Rubrik av programmet visar vilken version programmet är i 
 print ("")
-print ("--- network_info v 0.33 ---")
+print ("--- network_info v 0.4 ---")
 print ("")
 
 #Skriver ut nätverks infromation
@@ -27,9 +27,16 @@ mac = ':'.join(re.findall('..', '%012x' % uuid.getnode()))
 print("MAC address: " + mac)
 
 #Test av att köra CLI komandon
-print ("")
-print (os.system("ping -c 4 8.8.8.8"))
 
+os_value = (os.name)
+
+if os_value == "posix":
+ print ("")
+ print (os.system("ping -c 4 8.8.8.8"))
+
+elif os_value == "nt":
+ print ("")
+ print (os.system("ping 8.8.8.8"))
 
 # Feature for code:
 # The Ping dosent work in windows platform and Linux good to go.
