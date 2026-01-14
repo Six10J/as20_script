@@ -19,7 +19,7 @@ print ("")
 #Skriver ut nätverks infromation
 print("Hostname: " + socket.gethostname())
 
-# Skriver ut network interface för linux
+# Skriver ut network interface för linux https://stackoverflow.com/questions/3837069/how-to-get-network-interface-card-names-in-python (2026-01-14)
 if os_value == "posix":
  addrs = str(psutil.net_if_addrs())
  net_interface = addrs.split()
