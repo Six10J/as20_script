@@ -8,7 +8,7 @@ import re, uuid
 import os, subprocess
 os_value = (os.name)
 
-# ???
+# För network interface
 import psutil
 
 #Rubrik av programmet visar vilken version programmet är i 
@@ -19,7 +19,7 @@ print ("")
 #Skriver ut nätverks infromation
 print("Hostname: " + socket.gethostname())
 
-# ???
+# Skriver ut network interface för linux
 if os_value == "posix":
  addrs = str(psutil.net_if_addrs())
  net_interface = addrs.split()
