@@ -20,9 +20,13 @@ print ("")
 print("Hostname: " + socket.gethostname())
 
 # ???
-addrs = str(psutil.net_if_addrs())
-net_interface = addrs.split()
-print("Network interface: " + net_interface[25].replace(":", " "))
+if os_value == "posix":
+ addrs = str(psutil.net_if_addrs())
+ net_interface = addrs.split()
+ print("Network interface: " + net_interface[25].replace(":", " "))
+
+else:
+ print("")
 
 #Lösning för att skriva ut IPv4 address lånat 
 #från https://stackoverflow.com/questions/166506/finding-local-ip-addresses-using-pythons-stdlib (2026-01-09)
