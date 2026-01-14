@@ -8,6 +8,9 @@ import re, uuid
 import os, subprocess
 os_value = (os.name)
 
+# ???
+import psutil
+
 #Rubrik av programmet visar vilken version programmet är i 
 print ("")
 print ("--- network_info v 0.5 ---")
@@ -15,6 +18,11 @@ print ("")
 
 #Skriver ut nätverks infromation
 print("Hostname: " + socket.gethostname())
+
+# ???
+addrs = str(psutil.net_if_addrs())
+net_interface = addrs.split()
+print("Network interface: " + net_interface[25].replace(":", " "))
 
 #Lösning för att skriva ut IPv4 address lånat 
 #från https://stackoverflow.com/questions/166506/finding-local-ip-addresses-using-pythons-stdlib (2026-01-09)
