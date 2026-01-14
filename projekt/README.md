@@ -24,3 +24,7 @@ Programmet är i beta stadiet och så här ser dess output ut, första bilden ä
 ![Output bild](exempel.png)
 
 ![Output bild](exempel2.png)
+
+Bild på programmets logik i form av ett flödesschema 
+
+![Output bild](Logik_av_programmet.png)
