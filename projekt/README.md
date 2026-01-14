@@ -5,7 +5,7 @@ Network_info.py är ett program som skriver ut nätverks information, i nu lägg
 Systemkrav:
 
 Linux eller windows miljö
-Senaste versionen av python IDE
+Senaste versionen av python 3
 
 Instruktioner för körning:
 
