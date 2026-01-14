@@ -52,8 +52,6 @@ elif os_value == "nt":
 else:
  print("Unkown operating system detected") 
 
-wait = input("testing: ")
-
 # Feature for code:
 # The Ping dosent work in windows platform and Linux good to go.
 # Cant run ./network_info.py and i chmod 777 and rerun it.
