@@ -13,7 +13,7 @@ import psutil
 
 #Rubrik av programmet visar vilken version programmet är i 
 print ("")
-print ("--- network_info v 0.5 ---")
+print ("--- network_info v 0.55 ---")
 print ("")
 
 #Skriver ut nätverks infromation
